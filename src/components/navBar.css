@@ -1,0 +1,12 @@
+.nav-bar-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.nav-bar{
+  background-color: lightblue !important;
+  display: flex;
+  justify-content: center;
+}
