@@ -13,6 +13,10 @@ import Badge from 'primevue/badge';
 import Button from 'primevue/button';
 import Drawer from 'primevue/drawer';
 import PanelMenu from 'primevue/panelmenu';
+import Tooltip from 'primevue/tooltip';
+import Dialog from 'primevue/dialog';
+import AutoComplete from 'primevue/autocomplete';
+
 
 import "primeicons/primeicons.css";
 
@@ -21,9 +25,11 @@ app.use(PrimeVue, {
   theme: {
     preset: Aura,
     options: {
-      darkModeSelector: false,
-  }
-  }
+      prefix: 'p',
+      darkModeSelector: 'system',
+    }
+  },
+  unstyled: false
 })
 
 app.use(router)
@@ -35,6 +41,10 @@ app.component('Badge', Badge )
 app.component('Drawer', Drawer )
 app.component('Button', Button )
 app.component('PanelMenu', PanelMenu )
+app.component('Dialog', Dialog )
+app.component('AutoComplete', AutoComplete )
+
+app.directive('Tooltip', Tooltip);
 
 //*USE A DRAWER FOR THE SIDEBAR WITH THE PANEL MENU TO MAKE IT LIKE DISCORD
 

@@ -36,6 +36,11 @@ const routes = [
     component: () => import('../views/MatchupsView.vue') 
   },
   { 
+    path: '/matchups/:character',
+    component: () => import('../views/MatchupsView.vue'),
+    props: true
+  },
+  { 
     path: '/notes',
     component: () => import('../views/NotesView.vue')
   },
