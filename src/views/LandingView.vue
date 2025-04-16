@@ -1,6 +1,6 @@
 <template>
 
-  <section class=" view-container landing-container">
+  <section class="view-container landing-container">
     <h1>DK discord Kong Kollege PWA</h1>
     <h3>All credits to the people from the discord that have researched and labbed everything you will see here</h3>
     <p class="page-intro">
@@ -45,12 +45,8 @@ export default {
 
 //*make grid 4/4 split and then the notes in the middle
 <style>
-.landing-container{
-  background-color: red;
-}
 
-.app-sections-display{
-  
+.app-sections-display{  
   display: flex; 
   flex-wrap: wrap;
   gap: 1rem;

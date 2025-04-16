@@ -2,41 +2,66 @@
   <div class="side-bar" style="z-index: 10;">
 
       <Drawer v-model:visible="visible" header="DKompendium" position="right">
-          <div class="panel-menu card flex justify-center">
-            <PanelMenu :model="itemsTest">
 
+          <div class="panel-menu">
+            <PanelMenu :model="navItems">
               <template #item="{ item }">
-                <router-link v-slot="{ href, navigate }" :to="item.route" custom>
+                <div v-if="item.route == 'none'">
+                  <a class="side-router-link cursor-pointer text-primary-700 dark:text-primary-0 px-4 py-4">
+                      <span :class="item.icon" />
+                      <span class="side-link-label ml-2">{{ item.label }}</span>
+                  </a>
+                </div>
+                <router-link v-else v-slot="{ href, navigate }" :to="item.route" custom>
                     <a class="side-router-link cursor-pointer text-primary-700 dark:text-primary-0 px-4 py-4" :href="href" @click="navigate">
                         <span :class="item.icon" />
                         <span class="side-link-label ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-            </template>
-
-
+              </template>
             </PanelMenu>
           </div>
+
       </Drawer>
 
-      <Button icon="pi pi-bars" v-Tooltip.left="'Open Menu'" @click="visible = !visible"/>
-      <Button icon="pi pi-cog" v-Tooltip.left="'Open Settings'" @click="visible = !visible"/>
+      <Dialog class="matchup-dialog" v-model:visible="showMuSearch" modal header="Select Matchup" :style="{ width: '50%' }">
 
-      <Dialog v-model:visible="showMuSearch" modal header="Select Matchup" :style="{ width: '50%' }">
-        <button @click="showMuSearch = false">close this shi</button>
+        <div class="autocomplete-container">
+          <AutoComplete class="autocomplete-field" v-model="selectedCharacter" optionLabel="label" :suggestions="filteredChars" @complete="searchChar($event)" @option-select="goToMatchup($event.value.label.toLowerCase())" />
+          <Button class="autocomplete-button" icon="pi pi-search" @click="goToMatchup(selectedCharacter.label.toLowerCase())"></Button>
+        </div>
+        
+        <PanelMenu :model="characters">
+          <template #item="{ item }">
+            <router-link v-slot="{ href, navigate }" :to="item.route" custom>
+                <a class="side-router-link cursor-pointer text-primary-700 dark:text-primary-0 px-4 py-4" :href="href" @click="navigate">
+                    <span :class="item.icon" />
+                    <span class="side-link-label ml-2">{{ item.label }}</span>
+                </a>
+            </router-link>
+          </template>
+        </PanelMenu>
+
       </Dialog>
+
+      <Button icon="pi pi-bars" @click="visible = !visible"/>
+      <Button icon="pi pi-cog" @click="visible = !visible"/>
 
   </div>
 </template>
 
 <script>
+
+import router from '../router/router'
+
 export default {
   name:'NavBar',
   data() {
     return {
       visible: false,
       showMuSearch: false,
-      itemsTest:[
+      selectedCharacter: null,
+      navItems:[
         {
           label: 'Home',
           icon: 'pi pi-home',
@@ -106,44 +131,132 @@ export default {
           icon: 'pi pi-home',
           command: () => {
             this.showMuSearch = true
+          },
+          route: 'none'
+        },
+      ],
+      characters:[
+        {
+          label: 'Mario',
+          icon: 'pi pi-home',
+          route: '/matchups/mario',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Kirby',
+          icon: 'pi pi-home',
+          route: '/matchups/kirby',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Donkey Kong',
+          icon: 'pi pi-home',
+          route: '/matchups/dk',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Mr. Game & Watch',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Bayonetta',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Cloud',
+          icon: 'pi pi-home',
+          route: '/matchups/cloud',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Sephiroth',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Ness',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Lucas',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Luigi',
+          icon: 'pi pi-home',
+          route: '/matchups/mrgw',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
           }
         },
       ],
+      filteredChars: []
     }
   },
-  props:{
-  }
+  methods: {
+    test(a){
+      console.log(a.value);
+    },
+    goToMatchup(char){
+      router.push(`/matchups/${char}`)
+      this.closeSide()
+    },
+    closeSide(){
+      this.visible = false
+      this.showMuSearch = false
+    },
+    searchChar(event){
+      setTimeout(() => {
+        if(!event.query.trim().length){
+          this.filteredChars = [...this.characters]
+        }else{
+          this.filteredChars = this.characters.filter((character) => {
+            return character.label.toLowerCase().startsWith(event.query.toLowerCase())
+          })
+        }
+      }, 250);
+    }
+  },
 }
 </script>
 
 <style>
-.side-bar{
-  height: 100vh;
-  width: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2rem 0 !important;
-}
-
-.p-drawer-content{
-    background-color: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0 !important;
-}
-
-.side-router-link{
-  text-decoration: none;
-  color: var(--text-color);
-  width: 100% !important;
-  gap: 0.5rem !important;
-  display: flex;
-}
-
-.side-link-label{
-  width: 100%;
-  display: inline-flex;
-}
+@import './SideBar.css'
 </style>
