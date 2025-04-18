@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/dk-compendium/sw.js', { scope: '/dk-compendium/' })})}
