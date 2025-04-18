@@ -37,19 +37,24 @@
       {
         "stageType":"pDKO Stages",
         "stageTypeExplanation":[
-          ""
+          "Grabbing swordies, not much to explain here"
         ]
       },
       {
         "stageType":"Flat Stages",
         "stageTypeExplanation":[
-          ""
+          "Cloud's juggles become worse on flat stages, as their aerials aren't designed to frame trap. They work better covering platforms as you land on them, whether with aerials, Utilt, or Usmash",
+          "Their neutral becomes a lot more linear, making it easier to get parries and grabs",
+          "We don't necessarily need pDKO when walkoff CDT works just fine, at even earlier percents too (unless if you get a grab at center)",
+          "HOWEVER, it becomes a LOT harder to run away from Cloud with Limit"
         ]
       },
       {
         "stageType":"Triplats",
         "stageTypeExplanation":[
-          ""
+          "Cloud becomes a LOT stronger as he can catch landings onto platforms",
+          "His platform pressure gets better with Bair / Cross Slash / Utilt / etc",
+          "His mobility becomes insane as he can jump from platform to platform, zigzagging all over the place until he decides to swing with his big fat sword"
         ]
       }
     ],

@@ -16,6 +16,10 @@ import PanelMenu from 'primevue/panelmenu';
 import Tooltip from 'primevue/tooltip';
 import Dialog from 'primevue/dialog';
 import AutoComplete from 'primevue/autocomplete';
+import Accordion from 'primevue/accordion';
+import AccordionPanel from 'primevue/accordionpanel';
+import AccordionHeader from 'primevue/accordionheader';
+import AccordionContent from 'primevue/accordioncontent';
 
 
 import "primeicons/primeicons.css";
@@ -43,6 +47,10 @@ app.component('Button', Button )
 app.component('PanelMenu', PanelMenu )
 app.component('Dialog', Dialog )
 app.component('AutoComplete', AutoComplete )
+app.component('Accordion', Accordion )
+app.component('AccordionPanel', AccordionPanel )
+app.component('AccordionHeader', AccordionHeader )
+app.component('AccordionContent', AccordionContent )
 
 app.directive('Tooltip', Tooltip);
 
