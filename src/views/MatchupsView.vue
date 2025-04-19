@@ -132,6 +132,14 @@
         <AccordionPanel value="5">
           <AccordionHeader>Other Notes</AccordionHeader>
           <AccordionContent>
+
+            <ul class="section-points-list p-1">
+              <template v-for="(item, index) in charInfo.matchupInfo?.otherNotes" :key="index">
+                <li class="mb-05">
+                  {{ item }}
+                </li>
+              </template>
+            </ul>
           </AccordionContent>
         </AccordionPanel>
 
