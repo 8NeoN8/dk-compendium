@@ -2,7 +2,7 @@
   <main class="main-container">
     <NavBar v-if="!isMobile"></NavBar>
     <div class="main-content">
-      <RouterView :isMobile="isMobile" :key="$route.fullPath"></RouterView>
+      <RouterView :key="$route.fullPath"></RouterView>
       <SideBar v-if="isMobile"></SideBar>
     </div>
   </main>

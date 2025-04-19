@@ -65,7 +65,7 @@ export default {
         {
           label: 'Home',
           icon: 'pi pi-home',
-          route: '/',
+          route: '/dk-compendium',
           command: () => {
             this.visible = false
           }
@@ -73,7 +73,7 @@ export default {
         {
           label: 'Summary',
           icon: 'pi pi-home',
-          route: '/summary',
+          route: '/dk-compendium/summary',
           command: () => {
             this.visible = false
           }
@@ -81,7 +81,7 @@ export default {
         {
           label: 'Glossary',
           icon: 'pi pi-home',
-          route: '/glossary',
+          route: '/dk-compendium/glossary',
           command: () => {
             this.visible = false
           }
@@ -89,7 +89,7 @@ export default {
         {
           label: "Combos",
           icon: 'pi pi-home',
-          route: '/combos',
+          route: '/dk-compendium/combos',
           command: () => {
             this.visible = false
           }
@@ -97,7 +97,7 @@ export default {
         {
           label: 'Fundamentals',
           icon: 'pi pi-home',
-          route: '/fundamentals',
+          route: '/dk-compendium/fundamentals',
           command: () => {
             this.visible = false
           }
@@ -105,7 +105,7 @@ export default {
         {
           label: "Cranky's Corner",
           icon: 'pi pi-home',
-          route: '/crankyscorner',
+          route: '/dk-compendium/crankyscorner',
           command: () => {
             this.visible = false
           }
@@ -113,7 +113,7 @@ export default {
         {
           label: 'Tech Guides',
           icon: 'pi pi-home',
-          route: '/techs',
+          route: '/dk-compendium/techs',
           command: () => {
             this.visible = false
           }
@@ -121,7 +121,7 @@ export default {
         {
           label: 'Resources',
           icon: 'pi pi-home',
-          route: '/resources',
+          route: '/dk-compendium/resources',
           command: () => {
             this.visible = false
           }
@@ -184,7 +184,7 @@ export default {
         {
           label: 'Cloud',
           icon: 'pi pi-home',
-          route: '/matchups/cloud',
+          route: '/dk-compendium/matchups/cloud',
           command: () => {
             this.visible = false
             this.showMuSearch = false

@@ -4,7 +4,15 @@ const routes = [
     component: () => import('../views/LandingView.vue')
   },
   { 
+    path: '/dk-compendium', 
+    component: () => import('../views/LandingView.vue')
+  },
+  { 
     path: '/summary',
+    component: () => import('../views/SummaryView.vue') 
+  },
+  { 
+    path: '/dk-compendium/summary',
     component: () => import('../views/SummaryView.vue') 
   },
   { 
@@ -41,11 +49,16 @@ const routes = [
     props: true
   },
   { 
+    path: '/dk-compendium/matchups/:character',
+    component: () => import('../views/MatchupsView.vue'),
+    props: true
+  },
+  { 
     path: '/notes',
     component: () => import('../views/NotesView.vue')
   },
   { 
-    path: '/notFound',
+    path: '/:pathMatch(.*)*',
     component: () => import('../views/404View.vue')
   },
 ]

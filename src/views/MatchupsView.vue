@@ -5,8 +5,13 @@
       <h1 class="character-header">{{ charInfo.name == '' ? 'No character selected' : charInfo.name}}</h1>
     </template>
 
-    <div class="">
-      <Accordion :value="['0']" multiple>
+    <div class="character-image">
+      <img v-if="charInfo.portraitLocation" :src="charPortrait" width="100px" height="100px">
+      <img v-if="false" :src="charIcon" width="25px" height="25px">
+    </div>
+
+    <article class="character-matchup-spread">
+      <Accordion :value="['none']" multiple>
 
         <AccordionPanel value="0">
           <AccordionHeader>Key Notes</AccordionHeader>
@@ -77,12 +82,50 @@
         <AccordionPanel value="3">
           <AccordionHeader>How We Win</AccordionHeader>
           <AccordionContent>
+            <template v-for="(section, index) in charInfo.matchupInfo?.howWeWin" :key="index">
+              <h4>{{ section.sectionName }}</h4>
+              <ul class="section-points-list p-1">
+                <template v-for="(sectionPoint, index) in section.sectionPoints" :key="index">
+                  <template v-if="typeof(sectionPoint) == 'object'">
+                    <li class="mb-05">{{ sectionPoint.subSectionDesc }}</li>
+                    <ul class="p-1">
+                      <template v-for="(point, index) in sectionPoint.subSectionPoints" :key="index">
+                          <li class="mb-05"> {{ point }} </li>
+                      </template>
+                    </ul>
+                  </template>
+
+                  <template v-else>
+                    <li class="mb-05">{{ sectionPoint }}</li>
+                  </template>
+                </template>
+              </ul>
+            </template>
           </AccordionContent>
         </AccordionPanel>
 
         <AccordionPanel value="4">
           <AccordionHeader>How We Lose</AccordionHeader>
           <AccordionContent>
+            <template v-for="(section, index) in charInfo.matchupInfo?.howWeLose" :key="index">
+              <h4>{{ section.sectionName }}</h4>
+              <ul class="section-points-list p-1">
+                <template v-for="(sectionPoint, index) in section.sectionPoints" :key="index">
+                  <template v-if="typeof(sectionPoint) == 'object'">
+                    <li class="mb-05">{{ sectionPoint.subSectionDesc }}</li>
+                    <ul class="p-1">
+                      <template v-for="(point, index) in sectionPoint.subSectionPoints" :key="index">
+                          <li class="mb-05"> {{ point }} </li>
+                      </template>
+                    </ul>
+                  </template>
+
+                  <template v-else>
+                    <li class="mb-05">{{ sectionPoint }}</li>
+                  </template>
+                </template>
+              </ul>
+            </template>
           </AccordionContent>
         </AccordionPanel>
 
@@ -110,52 +153,7 @@
           </AccordionContent>
         </AccordionPanel>
       </Accordion>
-    </div>
-
-    <!-- <h2 class="notes-header">Key Notes</h2>
-    <article class="key-notes article-container p-05">
-      <ul class="notes-list p-1">
-        <template v-for="(note, index) in charInfo.matchupInfo?.keyNotes" :key="index">
-          <li class="note mb-05">
-            {{ note }}
-          </li>
-        </template>
-      </ul>
     </article>
-
-    <h2 class="consensus-header">General Consensus</h2>
-    <article class="general-consensus article-container p-05 mb-1">
-
-
-      <template v-for="(consensusPart, index) in charInfo.matchupInfo.generalConsensus" :key="index">
-
-        <template v-if="consensusPart.type == 'description'">
-          <div class="consensus-description mb-1">
-            {{ consensusPart.content }}
-          </div>
-        </template>
-
-        <template v-if="consensusPart.type == 'dkHas'">
-          <h3 class="character-has">DK has:</h3>
-          <ul class="has-list p-1">
-            <template v-for="(item, index) in consensusPart.content" :key="index">
-              <li class="has-item mb-05">{{ item }}</li>
-            </template>
-          </ul>
-        </template>
-
-        <template v-if="consensusPart.type == 'enemyHas'">
-          <h3 class="character-has">{{ charInfo.name }} has:</h3>
-          <ul class="has-list p-1">
-            <template v-for="(item, index) in consensusPart.content" :key="index">
-              <li class="has-item mb-05">{{ item }}</li>
-            </template>
-          </ul>
-        </template>
-        
-      </template>
-    </article>
- -->
   </section>
 
 </template>
@@ -168,7 +166,9 @@ export default {
     return {
       charInfo: {
         name: ''
-      }
+      },
+      charPortrait: '',
+      charIcon: '',
     }
   },
   props:{
@@ -187,10 +187,31 @@ export default {
         import(`../assets/character/matchups/${charName}.json`)
         .then((json) => {
           this.charInfo = json.default
+          this.getCharacterImages()
         })
+
+  
+
+        
       } catch (error) {
         console.log('Theres no file for that character yet');
       }
+    },
+    getCharacterImages(){
+
+      import(this.charInfo.portraitLocation)
+      .then((json) => {
+        this.charPortrait = json.default
+        
+      })
+      
+
+      //! this is for later, it should work by putting the svgs in the /public directory
+      /* this.charIcon = () => fetch(this.charInfo.iconLocation)
+      .then((res) => {
+        if(!res.ok) throw res
+        return res.text()
+      }) */
     }
   },
   created() {
@@ -227,5 +248,15 @@ export default {
 
 .p-accordioncontent-content{
   padding: 0.5rem !important;
+}
+
+li.mb-05{
+  word-wrap: break-word;
+}
+
+.character-image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 </style>
