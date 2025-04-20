@@ -146,36 +146,9 @@ export default {
           }
         },
         {
-          label: 'Kirby',
+          label: 'Kazuya',
           icon: 'pi pi-home',
-          route: '/matchups/kirby',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
-        {
-          label: 'Donkey Kong',
-          icon: 'pi pi-home',
-          route: '/matchups/dk',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
-        {
-          label: 'Mr. Game & Watch',
-          icon: 'pi pi-home',
-          route: '/matchups/mrgw',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
-        {
-          label: 'Bayonetta',
-          icon: 'pi pi-home',
-          route: '/matchups/mrgw',
+          route: '/matchups/kazuya',
           command: () => {
             this.visible = false
             this.showMuSearch = false
@@ -191,41 +164,14 @@ export default {
           }
         },
         {
-          label: 'Sephiroth',
+          label: 'Steve',
           icon: 'pi pi-home',
-          route: '/matchups/mrgw',
+          route: '/matchups/steve',
           command: () => {
             this.visible = false
             this.showMuSearch = false
           }
-        },
-        {
-          label: 'Ness',
-          icon: 'pi pi-home',
-          route: '/matchups/mrgw',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
-        {
-          label: 'Lucas',
-          icon: 'pi pi-home',
-          route: '/matchups/mrgw',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
-        {
-          label: 'Luigi',
-          icon: 'pi pi-home',
-          route: '/matchups/mrgw',
-          command: () => {
-            this.visible = false
-            this.showMuSearch = false
-          }
-        },
+        }
       ],
       filteredChars: []
     }

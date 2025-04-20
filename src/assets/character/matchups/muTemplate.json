@@ -121,7 +121,78 @@
         ]
       }
     ],
-    "howWeLose":["same as above"],
+    "howWeLose":[
+      {
+        "sectionName":"Bait & Punish",
+        "sectionPoints":[
+          "",
+          "",
+          {
+            "subSectionDesc":"",
+            "subSectionPoints":[
+              ""
+            ]
+          },
+          ""
+        ]
+      },
+      {
+        "sectionName":"Shielding + Parries",
+        "sectionPoints":[
+          {
+            "subSectionDesc":"Parry Punishes",
+            "subSectionPoints":[
+              ""
+            ]
+          }
+          ,
+          {
+            "subSectionDesc":"Parry Punishes",
+            "subSectionPoints":[
+              ""
+            ]
+          }
+          ,
+          {
+            "subSectionDesc":"Parry Punishes",
+            "subSectionPoints":[
+              ""
+            ]
+          },
+          {
+            "subSectionDesc":"Spot Dodge",
+            "subSectionPoints":[
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName":"Edgeguarding",
+        "sectionPoints":[
+          ""
+        ]
+      },
+      {
+        "sectionName":"Corner Carries",
+        "sectionPoints":[
+          ""
+        ]
+      },
+      {
+        "sectionName":"Intercept Jumps",
+        "sectionPoints":[
+          ""
+        ]
+      }
+      ,
+      {
+        "sectionName":"Camp Out Limit",
+        "sectionPoints":[
+          ""
+        ]
+      }
+    ],
     "otherNotes":[
       ""
     ],

@@ -1,0 +1,300 @@
+{
+  "name":"",
+  "iconLocation":"../svgs/(char).svg",
+  "portraitLocation":"../portraits/(char)/chara_1_donkey_00.png",
+  "matchupInfo":{
+    "keyNotes":[
+      "Always position for Minecart (including double jump minecarts)",
+      "Keep constant, passive, mid-range pressure, and bait out whiffs. ACT SECOND",
+      "Ftilt / Dtilt / Nair vs blocks (range vs cooldown)",
+      "Keep checking the meter!"
+    ],
+    "generalConsensus":[
+      {
+        "type":"description",
+        "content": "Despite everything Steve has, DK has all the tools to make neutral feel pretty even. However, it's extremely easy for DK to slip up once given the risk-free nature of Steve's... everything, making it feel like somewhere between **-1 to -2**."
+      },
+      {
+        "type":"dkHas",
+        "content":[
+          "Good mid-range pressure, vs Steve's committal mid range",
+          "Great normals for removing blocks"
+        ]
+      },
+      {
+        "type":"enemyHas",
+        "content":[
+          "We all know what Steve has at this point"
+        ]
+      }
+    ],
+    "stageSelection":[
+      {
+        "stageType":"Final Destination",
+        "stageTypeExplanation":[
+          "is usually Steve's __preferred__ stage, as he gets his __shovel__ on this stage. None of his attacks use the shovel, meaning that the durability of his attacks and his mining aren't tied together. It's also harder to avoid Anvil, with no platforms to hide under."
+        ]
+      },
+      {
+        "stageType":"Lylat Cruise",
+        "stageTypeExplanation":[
+          "is usually considered Steve's __worst__ stage. Despite getting purely iron, Steve's mining rate is by far the slowest here, and the rate of mining iron compared to placing strategic blocks (which would allow him to mine even more) isn't worth it for Steve. Pray Lylat is legal so Steve is forced to waste a ban here 🙏 "
+        ]
+      },
+      {
+        "stageType":"All Other Stager",
+        "stageTypeExplanation":[
+          "They are typically player preference (in general for Steve players)",
+          "Most (non-DK) players fighting Steve tend to complain about Stone stages for how much effort they need to break stone blocks. However most DK players agree that stone blocks don't really bother DK in neutral too much (e.g. 1 Nair + 1 Dtilt is all you need)"
+        ]
+      },
+      {
+        "stageType":"Terrain type for each stage",
+        "stageTypeExplanation":[
+          "see https://discord.com/channels/440714291423870977/877454983874904095/877481052829003787 for what Steve gets from each terrain",
+          "Stages ordered from Neutral to weakest material (dirt) to strongest (iron)"
+        ]
+      },
+      {
+        "stageType":"SBF & BF",
+        "stageTypeExplanation":[
+          "Entire stage: __'Neutral'__",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"FD",
+        "stageTypeExplanation":[
+          "Entire stage: 'Neutral'",
+          "Tool: Shovel (note that none of Steve's attacks use a shovel, making it ideal for Steve)"
+        ]
+      },
+      {
+        "stageType":"Smashville",
+        "stageTypeExplanation":[
+          "Entire stage: __Wood__",
+          "Tool: Axe"
+        ]
+      },
+      {
+        "stageType":"Town & City",
+        "stageTypeExplanation":[
+          "Entire stage: __Wood__",
+          "Tool: Axe"
+        ]
+      },
+      {
+        "stageType":"Yoshi's Story",
+        "stageTypeExplanation":[
+          "Main stage: __Wood__",
+          "Platforms: __Wool__ (equivalent to __Dirt__)",
+          "Tool: Axe (main stage); Shovel (platforms)"
+        ]
+      },
+      {
+        "stageType":"Northern Cave",
+        "stageTypeExplanation":[
+          "Entire Stage: __Stone__",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"Kalos",
+        "stageTypeExplanation":[
+          "Main stage: __Stone__",
+          "Side platforms: __Stone__",
+          "Main stage edges: __Iron__",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"PS2",
+        "stageTypeExplanation":[
+          "Entire stage: __Stone__",
+          "(Note: not entire stage when hazards on)",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"Unova",
+        "stageTypeExplanation":[
+          "Entire stage: __Stone__",
+          "(Note: not entire stage when hazards on)",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"Lylat",
+        "stageTypeExplanation":[
+          "Entire stage: __Iron__",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"Hollow Bastion",
+        "stageTypeExplanation":[
+          "Center of main stage: __Iron__",
+          "Rest: __Stone__",
+          "Tool: Pickaxe"
+        ]
+      },
+      {
+        "stageType":"Notes",
+        "stageTypeExplanation":[
+          "They are typically player preference (in general for Steve players)",
+          "Most (non-DK) players fighting Steve tend to complain about Stone stages for how much effort they need to break stone blocks. However most DK players agree that stone blocks don't really bother DK in neutral too much (e.g. 1 Nair + 1 Dtilt is all you need)",
+          "Steve's inventory starts the same regardless of stage (except dirt -> dirt equivalent, e.g. Wool on YS)",
+          "If a section is labeled as either Dirt, Wood, or Stone, then Steve can only mine that one material out of the three.",
+          "E.g. on PS2 (Stone), Steve can only mine stone, not dirt or wood (but will still mine iron, gold, etc.)",
+          "If a section is labeled as Iron, then Steve will not mine any dirt, wood, nor stone (mining all iron instead). This sounds dangerous but because Steve mines the slowest on these stages, plus with blocks consuming iron, Steves consider iron stages their worst.",
+          "'Neutral' (the Quickplay stages) gives Steve a bit of all three materials, with slightly more dirt than wood/stone."
+        ]
+      }
+    ],
+    "howWeWin":[
+      {
+        "sectionName":"Mid-Range Pressure: Don't Let Him Collect Materials!",
+        "sectionPoints":[
+          "The less material he has, the less he's able to use all his specials excluding upB. Keep staying close to him (abuse the speed difference) and keep him pressured. Focus on **keeping him in range**, then wait for him to commit to an option. Positional pressure!!",
+          "Use the __**THREAT**__ of Dash Attack <a:DashAttackGif:576138235445510172> to keep Steve in check. Try to stay within Dash Attack range as often as possible, which either prevents them from mining or pushes them into the corner.",
+          "Focus not only on the position, but on **__FEINTS__**. Weave in and out often, encouraging him to whiff burst options, either committing to a dash attack or dash grab for you to punish, or punishing his Minecart, and/or burning an iron from his Minecart. __Feint like your life depends on it__, because it does (in Smash).",
+          "Naturally with all the positioning and baiting, it's all about **acting second** <:GitGud:441060716259180554> ",
+          "This is a very strong universal tactic, both in DK vs any footsies MU and in fighting games in general, but this NEEDS to be your primary gameplan 99% of the time vs Steve.",
+          {
+            "subSectionDesc":"The one Exception...",
+            "subSectionPoints":[
+              "Jump in Punch is soooooo safe. The shield RPS after is often in DK's favor, and you can get a big punish off that.",
+              "Rarikkusu <:RedDK:521875759980347395> does this a LOT, to where he doesn't care how much Steve mines as long as he gets Punch charged. See https://discord.com/channels/440714291423870977/539277425058643968/1137959819869950072",
+              "🎞️ From ChunkyKong <:Chunky:441059225393954816> Safe from sword Bair (f7 oos) even on parry: <https://clips.twitch.tv/RelatedAstuteCardWTRuck-LafGEQ7pNXG1WqUl>",
+              "🎞️ From Rarikkusu <:RedDK:521875759980347395> Safe from sword Bair, shielding -> spot dodging anvil, then getting a punish: <https://www.youtube.com/clip/UgkxjPnn8HJyJILMrTXnEVamgSi6LhfK9aAI>"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName":"Check His Meter",
+        "sectionPoints":[
+          {
+            "subSectionDesc":"**Iron:** Without iron, he's unable to use either Anvil (dair / dthrow) or Minecart (side B). Useful to know when catching him offstage or above you, or for playing neutral vs Minecart.",
+            "subSectionPoints":[
+              "If he doesn't have iron, you can **play closer** to Steve, though you still want to space your moves to avoid his death combos.",
+              "You can get away with spaced Dtilts and gHS, without having to worry about Minecart now"
+            ]
+          },
+          "**Gold:** With gold in the inventory, his minecart will travel notably faster than usual, so you would have to **respect his burst range even more**. "
+        ]
+      }
+    ],
+    "howWeLose":[
+      {
+        "sectionName":"Combo Starters",
+        "sectionPoints":[
+          "Jab",
+          "Utilt",
+          "Dthrow",
+          "Especially watch out for **roll in** -> combo starter",
+          "If you get touched by any of these moves, expect your stock to evaporate in an instant, regardless of percent. Do NOT get close to him, EVER. That raw dash grab? That raw dash attack? Even if you didn't do it for an entire minute? It is NOT worth it.",
+          "If you do want to make the first move, using safer pokes like **Dtilt** <:Dtilt:953427707490869268> and **gHS** <a:gHS:648613622188212225> is preferred."
+        ]
+      },
+      {
+        "sectionName":"Ledge Trapping",
+        "sectionPoints":[
+          {
+            "subSectionDesc":"Dtilt vs ledge hang",
+            "subSectionPoints":[
+              "You also need to watch out for Fair (without Steve jumping), Minecart, Bair... it's a lot",
+              "Basically Dtilt is a real threat regardless of percent, so you don't want to rely on ledge hang too much",
+              "🎞️ : <https://clips.twitch.tv/EsteemedAltruisticKeyboardSmoocherZ>"
+            ]
+          },
+          {
+            "subSectionDesc":"TNT at ledge",
+            "subSectionPoints":[
+              "Hitting TNT can get rid of the TNT plate",
+              "🎞️ : https://clips.twitch.tv/NastyIncredulousElephantYouDontSay-tMncZ3xHDpatCll_",
+              "Notice how Onin tries to set off the TNT with Utilt, but the plate disappears right before the utilt, thanks to Corrin hitting the TNT",
+              "For DK, **Uair** is his only aerial that deletes the plate with one hit",
+              "If TNT is too far for you to hit (unreactably for Steve), **ledge jump + air dodge** is basically your only option",
+              "**Mixing up your timings** for both ledge jump and air dodge is critical",
+              "**Ledge jump + slight wait (~1/2 second) + air dodge** is often very strong",
+              "TNT can be pushed off the ledge with Steve's normals, so watch out for it as you recover",
+              "If Steve is standing on the TNT, expect him to instantly detonate it safely with Dsmash"
+            ]
+          },
+          {
+            "subSectionDesc":"Block hanging above ledge",
+            "subSectionPoints":[
+              "**STAY AWAY FROM STEVE!!** if he's camping near this block. Exert mid-range pressure to discourage him from mining still, but no matter what, do NOT get grabbed.",
+              "If he grabs you... he throws you under the block.",
+              "If you miss the tech, you get stage spiked can't recover (unless you're at a very low percent): ",
+              "If you do tech, you get Fsmashed"
+            ]
+          },
+          ""
+        ]
+      },
+      {
+        "sectionName":"Losing the Lead",
+        "sectionPoints":[
+          "If you drop the lead against Steve, note that they may opt at any time to just run offstage and aim for a timeout by continuously creating a block under the ledge. __DO NOT CHALLENGE THIS__ (unless you *really* know what you're doing, or are heavily against the time). How long they can plank offstage depends on how many resources they initially have (up to 5+ minutes); the fewer they started with, the more likely they'll *have* to get back on stage eventually, as they burn resources offstage faster than they can mine (though at a very slow rate).",
+
+          "To minimize the planking, __break the crafting table!__ Every time Steve summons the table, it costs materials, on average faster than his mining rate. However, note that if the table is on the opposite end of the stage, you may want to __feint__ going to the table several times to see if he gets up; otherwise you may give him back the stage for free, without room for corner pressure.",
+
+          "Always stay at a reactable Minecart range. Don't try to punish him for ledge planking. Just wait it out.",
+
+          "They can also do this high above the stage (called 'Sky Mining'), where if you attempt to interrupt them, you can get caught by an Anvil or really anything. Play patient, and just try to bait them into moving into a worse position."
+        ]
+      },
+      {
+        "sectionName":"Landing into Steve in Disadvantage",
+        "sectionPoints":[
+          "Staying out of Steve's bubble is paramount, but it's especially important to remember this when __you're in disadvantage__. It's very tempting to swing at Steve, but instead you'll get caught by an Utilt, Usmash, shield grab, Fsmash, or really anything Steve wants.",
+          "It's imperative here to accept the need to __reset to neutral__ when in disadvantage. Unfortunately Steve will successfully mine a few more materials, but this is much more acceptable than taking 100%+ or even a stock."
+        ]
+      }
+
+    ],
+    "otherNotes":[
+    ],
+    "setsToStudy":[
+      {
+        "setDescription":"player1 vs player2 - Tournament - Date",
+        "setLink":"youtube.link",
+        "setScore":"W/L: W, 2-0"
+      }
+    ],
+    "extraResources":[
+      {
+        "resourceDescription":"example: Bair tumble percent",
+        "resourcePoints":[
+          {
+            "nameThisHowever":"Short Hop",
+            "howeversInfo":"30%"
+          },
+          {
+            "nameThisHowever":"Full Hop",
+            "howeversInfo":"27%"
+          }
+        ]
+      },
+      {
+        "resourceDescription":"example: Dair through platform",
+        "resourcePoints":[
+          "example: True in: PS2/SBF/BF/SMV/HB"
+        ]
+      }
+    ],
+    "moves":{
+      "grounded":[
+  
+      ],
+      "aerials":[
+  
+      ],
+      "specials":[
+  
+      ]
+    }
+  }
+}
