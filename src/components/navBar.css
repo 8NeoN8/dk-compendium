@@ -8,4 +8,6 @@
 .nav-bar{
   display: flex;
   justify-content: center;
+  height: 3rem !important;
+  background-color: var(--p-primary-color) !important;
 }

@@ -6,12 +6,12 @@
     </template>
 
     <div class="character-image">
-      <img v-if="charInfo.portraitLocation" :src="charPortrait" width="100px" height="100px">
-      <img v-if="false" :src="charIcon" width="25px" height="25px">
+      <img :src="`/dk-compendium/src/assets/character/portraits/${character}.png`" width="100px" height="100px">
     </div>
 
     <article class="character-matchup-spread">
-      <Accordion :value="['none']" multiple>
+
+      <Accordion :value="['none']" multiple v-if="charInfo.version != 'new'">
 
         <AccordionPanel value="0">
           <AccordionHeader>Key Notes</AccordionHeader>
@@ -161,22 +161,88 @@
           </AccordionContent>
         </AccordionPanel>
       </Accordion>
+
+      <Accordion :value="['none']" multiple v-else>
+        <template v-for="(section, index) in charInfo.matchupInfo" :key="index">
+          <AccordionPanel :value="index">
+            <AccordionHeader>{{ section.sectionName }}</AccordionHeader>
+            <AccordionContent>
+              <ul class="p-1">
+                <template v-for="(point, index) in section.sectionPoints" :key="index">         
+                    <li v-if="point.type == 'text'" class="mb-05">
+                      {{ point.content }}
+                    </li>
+
+                    <li v-if="point.type == 'list'" class="unlisted">
+                      {{ point.title }}
+                      <br>
+                      <ul class="p-05">
+                        <template v-for="(item, index) in point.items" :key="index">
+                          
+                            <li v-if="item.type == 'text'" class="mb-05">
+                              {{ item.content }}
+                            </li>
+                          
+                        </template>
+                      </ul>
+                    </li>
+
+                    <li v-if="point.type == 'description'" class="mb-05 unlisted" :class="point.type == 'description' ? 'unlisted' : null">
+                      {{ point.content }}
+                    </li>
+
+                    <li v-if="point.type == 'subsection'" class="unlisted">
+                      <h4 class="subsection-header">
+                        {{ point.header }}
+                      </h4>
+
+                      <ul class="p-1">
+                        <template v-for="(item, index) in point.subpoints" :key="index">
+                          
+                          <li v-if="item.type == 'text'" class="mb-05">
+                            {{ item.content }}
+                          </li>
+
+                          <li v-if="item.type == 'list'">
+                            {{ item.title }}
+                            <br>
+                            <ul class="p-05">
+                              <template v-for="(subitem, index) in item.items" :key="index">
+                              
+                                  <li v-if="subitem.type == 'text'" class="mb-05">
+                                    {{ subitem.content }}
+                                  </li>
+
+                                  <li v-if="subitem.type == 'linkTwitch'">
+                                    <a :href="subitem.content">{{ subitem.content }}</a>
+                                  </li>
+                                
+                              </template>
+                            </ul>
+                          </li>
+                        </template>
+                      </ul>
+                    </li>
+                </template>
+              </ul>
+            </AccordionContent>
+          </AccordionPanel>
+        </template>
+      </Accordion>
+
     </article>
   </section>
 
 </template>
 
 <script>
-
 export default {
   name: "MatchupView",
   data() {
     return {
       charInfo: {
         name: ''
-      },
-      charPortrait: '',
-      charIcon: '',
+      }
     }
   },
   props:{
@@ -195,7 +261,6 @@ export default {
         import(`../assets/character/matchups/${charName}.json`)
         .then((json) => {
           this.charInfo = json.default
-          this.getCharacterImages()
         })
 
   
@@ -205,22 +270,6 @@ export default {
         console.log('Theres no file for that character yet');
       }
     },
-    getCharacterImages(){
-
-      import(this.charInfo.portraitLocation)
-      .then((json) => {
-        this.charPortrait = json.default
-        
-      })
-      
-
-      //! this is for later, it should work by putting the svgs in the /public directory
-      /* this.charIcon = () => fetch(this.charInfo.iconLocation)
-      .then((res) => {
-        if(!res.ok) throw res
-        return res.text()
-      }) */
-    }
   },
   created() {
     if(this.character != '') this.getCharacterInfo(this.character)
@@ -241,15 +290,6 @@ export default {
   margin-bottom: 1rem;
 }
 
-.notes-list{
-}
-
-.note{
-}
-
-.article-container{
-}
-
 .p-accordionheader{
   padding: 0.5rem !important;
 }
@@ -260,6 +300,11 @@ export default {
 
 li.mb-05{
   word-wrap: break-word;
+}
+
+.unlisted{
+  list-style: none;
+  margin-left: -1rem;
 }
 
 .character-image{

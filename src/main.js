@@ -20,6 +20,10 @@ import Accordion from 'primevue/accordion';
 import AccordionPanel from 'primevue/accordionpanel';
 import AccordionHeader from 'primevue/accordionheader';
 import AccordionContent from 'primevue/accordioncontent';
+import DeferredContent from 'primevue/deferredcontent';
+import Image from 'primevue/image';
+import Card from 'primevue/card';
+
 
 
 import "primeicons/primeicons.css";
@@ -43,7 +47,10 @@ app.component('InputText', InputText)
 app.component('Avatar', Avatar)
 app.component('Badge', Badge )
 app.component('Drawer', Drawer )
+app.component('Card', Card )
+app.component('Image', Image )
 app.component('Button', Button )
+app.component('DeferredContent', DeferredContent )
 app.component('PanelMenu', PanelMenu )
 app.component('Dialog', Dialog )
 app.component('AutoComplete', AutoComplete )
@@ -51,6 +58,7 @@ app.component('Accordion', Accordion )
 app.component('AccordionPanel', AccordionPanel )
 app.component('AccordionHeader', AccordionHeader )
 app.component('AccordionContent', AccordionContent )
+
 
 app.directive('Tooltip', Tooltip);
 

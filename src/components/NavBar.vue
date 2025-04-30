@@ -23,47 +23,47 @@ export default {
         {
           label: 'Home',
           icon: 'pi pi-home',
-          route: '/'
+          route: '/dk-compendium'
         },
         {
-          label: 'Summary & Attributes',
+          label: 'Summary',
           icon: 'pi pi-home',
-          route: '/summary'
+          route: '/dk-compendium/summary'
         },
         {
           label: 'Glossary',
           icon: 'pi pi-home',
-          route: '/glossary'
+          route: '/dk-compendium/glossary'
         },
         {
           label: "Combos",
           icon: 'pi pi-home',
-          route: '/combos'
+          route: '/dk-compendium/combos'
         },
         {
           label: 'Fundamentals',
           icon: 'pi pi-home',
-          route: '/fundamentals'
+          route: '/dk-compendium/fundamentals'
         },
         {
           label: "Cranky's Corner",
           icon: 'pi pi-home',
-          route: '/crankyscorner'
+          route: '/dk-compendium/crankyscorner'
         },
         {
           label: 'Tech Guides',
           icon: 'pi pi-home',
-          route: '/techs'
+          route: '/dk-compendium/techs'
         },
         {
           label: 'Resources',
           icon: 'pi pi-home',
-          route: '/resources'
+          route: '/dk-compendium/resources'
         },
         {
-          label: 'Match-up Guides',
+          label: 'Match-ups',
           icon: 'pi pi-home',
-          route: '/matchups'
+          route: '/dk-compendium/matchups'
         },
       ]
     }

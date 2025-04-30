@@ -21,6 +21,9 @@
               </template>
             </PanelMenu>
           </div>
+          <div class="dko-chart">
+            <Image :src="dkoChart" alt="pDKO-Chart" preview  width="225px" />
+          </div>
 
       </Drawer>
 
@@ -45,7 +48,7 @@
       </Dialog>
 
       <Button icon="pi pi-bars" @click="visible = !visible"/>
-      <Button icon="pi pi-cog" @click="visible = !visible"/>
+      <Button icon="pi pi-cog" @click="visible = !visible;"/>
 
   </div>
 </template>
@@ -53,7 +56,7 @@
 <script>
 
 import router from '../router/router'
-
+import imgUrl from '../assets/pDKO-Chart.png'
 export default {
   name:'NavBar',
   data() {
@@ -61,6 +64,7 @@ export default {
       visible: false,
       showMuSearch: false,
       selectedCharacter: null,
+      dkoChart: imgUrl,
       navItems:[
         {
           label: 'Home',
@@ -139,7 +143,16 @@ export default {
         {
           label: 'Mario',
           icon: 'pi pi-home',
-          route: '/matchups/mario',
+          route: '/dk-compendium/matchups/mario',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
+          label: 'Bayonetta',
+          icon: 'pi pi-home',
+          route: '/dk-compendium/matchups/bayonetta',
           command: () => {
             this.visible = false
             this.showMuSearch = false
@@ -148,7 +161,7 @@ export default {
         {
           label: 'Kazuya',
           icon: 'pi pi-home',
-          route: '/matchups/kazuya',
+          route: '/dk-compendium/matchups/kazuya',
           command: () => {
             this.visible = false
             this.showMuSearch = false
@@ -166,7 +179,7 @@ export default {
         {
           label: 'Steve',
           icon: 'pi pi-home',
-          route: '/matchups/steve',
+          route: '/dk-compendium/matchups/steve',
           command: () => {
             this.visible = false
             this.showMuSearch = false
