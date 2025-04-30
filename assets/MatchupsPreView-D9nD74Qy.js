@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./index-CLckzRDK.js";const s={data(){return{}},props:{isMobile:{type:Boolean,default:!1}}},r={class:"view-container mu-preview-container"};function a(c,n,i,p,_,l){return o(),t("section",r," preview ")}const u=e(s,[["render",a]]);export{u as default};
