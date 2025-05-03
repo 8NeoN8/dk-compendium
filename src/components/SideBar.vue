@@ -151,6 +151,15 @@ export default {
           }
         },
         {
+          label: 'R.O.B',
+          icon: 'rob.svg',
+          route: '/dk-compendium/matchups/rob',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
           label: 'Roy',
           icon: 'roy.svg',
           route: '/dk-compendium/matchups/roy',
