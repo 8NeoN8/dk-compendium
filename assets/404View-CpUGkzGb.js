@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as t}from"./index-CCVqlD37.js";const n={name:"404View",data(){return{}},components:{},methods:{}};function a(c,r,s,_,p,d){return t(),o("h1",null,"Page Not Found")}const u=e(n,[["render",a]]);export{u as default};
