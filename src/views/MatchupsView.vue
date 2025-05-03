@@ -6,12 +6,12 @@
     </template>
 
     <div class="character-image">
-      <img :src="`/dk-compendium/src/assets/character/portraits/${character}.png`" width="100px" height="100px">
+      <img :src="`../assets/character/portraits/${character}.png`" width="100px" height="100px">
     </div>
 
     <article class="character-matchup-spread">
 
-      <Accordion :value="['none']" multiple v-if="charInfo.version != 'new'">
+      <Accordion :value="['0']" multiple v-if="charInfo.version != 'new'">
 
         <AccordionPanel value="0">
           <AccordionHeader>Key Notes</AccordionHeader>
@@ -261,11 +261,7 @@ export default {
         import(`../assets/character/matchups/${charName}.json`)
         .then((json) => {
           this.charInfo = json.default
-        })
-
-  
-
-        
+        })        
       } catch (error) {
         console.log('Theres no file for that character yet');
       }

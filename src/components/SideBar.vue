@@ -38,7 +38,7 @@
           <template #item="{ item }">
             <router-link v-slot="{ href, navigate }" :to="item.route" custom>
                 <a class="side-router-link cursor-pointer text-primary-700 dark:text-primary-0 px-4 py-4" :href="href" @click="navigate">
-                    <span :class="item.icon" />
+                    <img :src="`../assets/character/svgs/${item.icon}`" alt="character-icon" width="25px" height="25px">
                     <span class="side-link-label ml-2">{{ item.label }}</span>
                 </a>
             </router-link>
@@ -57,6 +57,7 @@
 
 import router from '../router/router'
 import imgUrl from '../assets/pDKO-Chart.png'
+
 export default {
   name:'NavBar',
   data() {
@@ -142,7 +143,7 @@ export default {
       characters:[
         {
           label: 'Mario',
-          icon: 'pi pi-home',
+          icon: 'mario.svg',
           route: '/dk-compendium/matchups/mario',
           command: () => {
             this.visible = false
@@ -150,8 +151,17 @@ export default {
           }
         },
         {
+          label: 'Roy',
+          icon: 'roy.svg',
+          route: '/dk-compendium/matchups/roy',
+          command: () => {
+            this.visible = false
+            this.showMuSearch = false
+          }
+        },
+        {
           label: 'Bayonetta',
-          icon: 'pi pi-home',
+          icon: 'bayonetta.svg',
           route: '/dk-compendium/matchups/bayonetta',
           command: () => {
             this.visible = false
@@ -160,7 +170,7 @@ export default {
         },
         {
           label: 'Kazuya',
-          icon: 'pi pi-home',
+          icon: 'kazuya.svg',
           route: '/dk-compendium/matchups/kazuya',
           command: () => {
             this.visible = false
@@ -169,7 +179,7 @@ export default {
         },
         {
           label: 'Cloud',
-          icon: 'pi pi-home',
+          icon: 'cloud.svg',
           route: '/dk-compendium/matchups/cloud',
           command: () => {
             this.visible = false
@@ -178,7 +188,7 @@ export default {
         },
         {
           label: 'Steve',
-          icon: 'pi pi-home',
+          icon: 'steve.svg',
           route: '/dk-compendium/matchups/steve',
           command: () => {
             this.visible = false
