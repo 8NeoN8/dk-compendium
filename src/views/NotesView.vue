@@ -16,6 +16,9 @@
     <li>
       added info to the krool matchup guide from the (x pplayer)'s document: (dock link)'
     </li>
+    <li>
+      removed info about differences between irar and attack cancel on glossary for less clutter and the basis of reverse bair usage is already covered in fundamentals
+    </li>
   </ul>
 
 </template>

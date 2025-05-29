@@ -1,8 +1,11 @@
 <template>
 
-  <h1>Fundamentals</h1>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <section class="view-container fundamentals-container">
 
+    
+
+  </section>
+  
 </template>
 
 <script>
@@ -19,5 +22,11 @@ export default {
   methods: {
     
   },
+  props:{
+    isMobile:{
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>

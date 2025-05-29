@@ -194,7 +194,7 @@ export default {
   padding: 0.5rem;
   border-radius: 8px;
   background-color: rgb(39, 39, 39);
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   text-align: justify;
 }
 
