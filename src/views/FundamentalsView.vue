@@ -101,7 +101,7 @@
 
           <h3 class="fundamental-title" id="oos">Out of Shield Game</h3>
           
-          <p class="fundamental-text">
+          <div class="fundamental-text">
 
             In Ultimate, it's best to treat shielding as a last-minute resort. Especially with DK whose out-of-shield (OOS) options are lackluster, if you're shielding, you're effectively in disadvantage. Since shield drops take 11 frames (without jumping), that leaves time for your opponent to continue on pressuring you without you being able to do anything. (Note that this does not apply as much when using walk + shield strategies vs spammable projectiles, per <router-link to="/dk-compendium/crankyscorner">Cranky's Corner</router-link>, such as against Young Link or Villager.) 
             <br>
@@ -130,7 +130,7 @@
               </ul>
               <li><b>Grounded Hand Slap (gHS) (Frame 23 OOS):</b> One of DK's slowest options, but the range makes up for this, plus it covers many options as well (shield, spot dodge, roll)</li>
             </ul>
-          </p>
+          </div>
 
         </li>
 

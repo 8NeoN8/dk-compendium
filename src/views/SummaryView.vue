@@ -69,8 +69,6 @@
           <div class="col">[3rd]</div>
         </div>
 
-        
-
         <div class="row">
           <div class="col stat">Walk speed:</div>
           <div class="col">1.365</div>
@@ -189,6 +187,8 @@ export default {
 
 .sub-title{
   font-size: 1.6rem;
+  border-bottom: 2px solid var(--p-primary-color);
+  width: 70%;
 }
 .summary-text{
   padding: 0.5rem;
@@ -196,6 +196,7 @@ export default {
   background-color: rgb(39, 39, 39);
   line-height: 1.5rem;
   text-align: justify;
+  border: 1px solid var(--p-primary-color);
 }
 
 .summary-table{
@@ -219,13 +220,17 @@ export default {
   width: 10rem;
 }
 
+.character-attributes{
+  
+}
+
 .desc-row{
   font-weight: bold;
   line-height: 2.2rem;
 }
 
 @media screen and (min-width: 1080px) {
-  .character-summary{
+  .character-summary, .character-attributes{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,8 +242,12 @@ export default {
 
   .summary-table{
     width: 50%;
-    
     justify-self: center;
+  }
+
+  .sub-title{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
   }
 }
 

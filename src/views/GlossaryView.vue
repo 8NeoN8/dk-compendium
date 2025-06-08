@@ -175,16 +175,29 @@ export default {
   padding: 0.5rem;
   border-radius: 8px;
   line-height: 1.5rem;
+  border: 1px solid var(--p-primary-color)
 }
 
 .page-title{
   text-align: center;
   font-size: 2rem;
+  
 }
 
 .term-name{
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--p-primary-color);
+  background-color: var(--p-primary-color);
+  padding: .02rem 0;
+  border-radius: 5px;
+  padding: 0.2rem;
+  text-align: center;
+
+}
+
+.top-section{
+  width: 100%;
 }
 
 @media screen and (min-width: 1080px) {

@@ -17,7 +17,7 @@
       <p class="middle-section-text">
         First of all, all credits to the wonderful people from the discord that have researched and labbed everything you will see here, 
         this project has just been the idea of one guy (me) that wanted to see the information in a different format and not need discord,
-        but if you have any suggestion or change you would like to tell me don't be afraid to dm me on <a href="https://www.x.com"> Twitter </a> or open an issue on the <a href="https://www.github.com">Github.</a>
+        but if you have any suggestion or change you would like to tell me don't be afraid to dm me on <a href="https://www.x.com"> Twitter</a>, <a href="https://www.bluesky.com"> Bluesky</a>, or open an issue on the <a href="https://www.github.com">Github.</a>
         <br>
         <br v-if="isMobile">
         Without further <a href="https://www.youtube.com/@Ado1024" target="_blank" class="ado-joke"><i>Ado</i></a>, here is what this website offers:
