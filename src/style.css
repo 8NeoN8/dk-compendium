@@ -68,6 +68,11 @@
   border: 1px solid var(--p-primary-color);
 }
 
+.page-title{
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--p-primary-color);
+}
 
 @media screen and (min-width: 1080px) {
 

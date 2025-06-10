@@ -150,5 +150,9 @@ export default {
   border-radius: 8px;
 }
 
+.combos-list > li{
+  margin-bottom: 1.5rem;
+}
+
 
 </style>
