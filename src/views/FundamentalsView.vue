@@ -1,33 +1,4 @@
 <template>
-
-  <div v-if="false">
-
-    REORDER OF FUNDAMENTALS FROM MOST BASIC TO MORE ADVANCED IMO
-
-    Walk dont run
-    landing options
-    OoS game
-    Opponent Resource tracking
-    Ledge trapping
-    trip confirm dtilt
-
-    No pummels
-    Giant punch charge
-    RCC
-
-    attack cancel Bair
-    Irar Bair
-    Nair AutoCancel
-    b-reverse/wavebounce aHS
-    perfect aHS
-
-    hold back on gsk at ledge
-    SideB ledge snap
-    Charged GP from ledge
-    CDT stage spikes
-
-  </div>
-
   <Drawer v-model:visible="visible" header="Fundamentals" position="left">
     <div class="panel-menu">
       <PanelMenu :model="fundiesList">

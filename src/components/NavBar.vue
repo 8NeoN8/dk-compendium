@@ -36,11 +36,6 @@ export default {
           route: '/dk-compendium/glossary'
         },
         {
-          label: "Combos",
-          icon: 'pi pi-home',
-          route: '/dk-compendium/combos'
-        },
-        {
           label: 'Fundamentals',
           icon: 'pi pi-home',
           route: '/dk-compendium/fundamentals'
@@ -49,6 +44,11 @@ export default {
           label: "Cranky's Corner",
           icon: 'pi pi-home',
           route: '/dk-compendium/crankyscorner'
+        },
+        {
+          label: "Combos",
+          icon: 'pi pi-home',
+          route: '/dk-compendium/combos'
         },
         {
           label: 'Tech Guides',
