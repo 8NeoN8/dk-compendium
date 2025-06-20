@@ -684,7 +684,6 @@ export default {
 <style>
 .fundamentals-list-wrapper{
   border-radius: 8px;
-  background-color: rgb(39,39,39);
   padding: 0.5rem;
   line-height: 1.5rem;
 }
@@ -700,6 +699,11 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+}
+
+.fundamental-item{
+  width: 80%;
 }
 
 .fundamental-title{

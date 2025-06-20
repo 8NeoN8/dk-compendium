@@ -150,6 +150,8 @@ export default {
   display: block;
   text-align: center;
   font-size: 1.2rem;
+  width: 80%;
+  justify-self: center;
 }
 
 
@@ -166,15 +168,20 @@ export default {
 }
 
 .crankys-tips{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  width: 80%;
+  
 }
 
 .tips-list{
-
+  list-style: none;
 }
 
 .tip-container{
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .tip-title{

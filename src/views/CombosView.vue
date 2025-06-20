@@ -134,6 +134,15 @@ export default {
 
 <style scoped>
 
+.combos{
+  width: 80%;
+  justify-self: center;
+}
+
+.combos-list{
+  list-style: none;
+}
+
 .combos-intro{
   font-size: 1.3rem;
 }
